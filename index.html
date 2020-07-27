@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+    <script>
+        function myClick(digit){
+            form.display.value +=(digit);
+        }
+        function equal(){
+            form.display.value = eval(form.display.value);
+        }
+        function AC(){
+            form.display.value = "";
+        }
+        function backspace(){
+           var preValue = form.display.value;
+           form.display.value = preValue.substr(0,preValue.length-1);
+        }
+    </script>
+
+
+</head>
+<body>
+    <div class="calculator">
+            <form action="" name="form">
+                <input type="text" class="form-control display" name="display" readonly>
+                <div class="button-area line">
+                    <input type="button" name="btn7" value="7" class="btn btn-primary" onclick="myClick('7')">
+                    <input type="button" name="btn8" value="8" class="btn btn-primary" onclick="myClick('8')">
+                    <input type="button" name="btn9" value="9" class="btn btn-primary" onclick="myClick('9')">
+                    <input type="button" name="btnPlus" value="+" class="btn btn-warning" onclick="myClick('+')">
+                </div>
+
+                <div class="button-area line">
+                    <input type="button" name="btn4" value="4" class="btn btn-primary" onclick="myClick('4')">
+                    <input type="button" name="btn5" value="5" class="btn btn-primary" onclick="myClick('5')">
+                    <input type="button" name="btn6" value="6" class="btn btn-primary" onclick="myClick('6')">
+                    <input type="button" name="btnMinus" value="-" class="btn btn-warning" onclick="myClick('-')">
+                </div>
+
+                <div class="button-area line">
+                    <input type="button" name="btn1" value="1" class="btn btn-primary" onclick="myClick('1')">
+                    <input type="button" name="btn2" value="2" class="btn btn-primary" onclick="myClick('2')">
+                    <input type="button" name="btn3" value="3" class="btn btn-primary" onclick="myClick('3')">
+                    <input type="button" name="btnMultiply" value="*" class="btn btn-warning" onclick="myClick('*')">
+                </div>
+
+                <div class="button-area line">
+                    <input type="button" name="btnZero" value="0" class="btn btn-primary" onclick="myClick('0')">
+                    <input type="button" name="btnZeroDbl" value="00" class="btn btn-primary" onclick="myClick('00')">
+                    <input type="button" name="btnPoint" value="." class="btn btn-primary" onclick="myClick('.')">
+                    <input type="button" name="btnDivide" value="/" class="btn btn-warning" onclick="myClick('/')">
+                </div>
+
+                    <div class="last-line">
+                        <input type="button" name="btnClear" value="AC" class="btn btn-warning" onclick="AC()">
+                        <input type="button" name="buttonDlt" value="dlt" class="btn btn-warning" onclick="backspace()">
+                        <input type="button" name="btnEqual" value="=" class="btn btn-warning" onclick="equal()">
+                    </div>
+
+            </form>
+        </div>
+    </div>
+</body>
+</html>
