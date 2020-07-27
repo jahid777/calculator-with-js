@@ -1,3 +1,7 @@
+h1{
+    color: orange;
+    margin-top: 5px;
+}
 .calculator{
     height: 380px;
     width: 280px;
